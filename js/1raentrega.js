@@ -11,12 +11,6 @@ sumarUtilidad() {
 	return this.importe * 1.21;
 	}
 
-importeSugerido() {
-	return this.importe * 1.4;
-	}
-}
-
-
 var arrayhabitacion = [];
 do {
 	var comprobacion = promp("Ingrese Tipo Habitacion o Fin para Terminar");
@@ -31,23 +25,19 @@ do {
 	}
 }
 while (comprobacion !="fin" ||  comprobacion !="FIN" )
-	
 
 console.log(arrayhabitacion);
-
-
-
 
 for (var habitacion of arrayhabitacion) {
 	document.write("nombre: " + habitacion.nombre);
 	document.write("Detalle: " + habitacion.detalle);
 	document.write("Cantidad: " + habitacion.cantidad);
-    	document.write("importe: " + habitacion.importe);
-    	document.write("importe con utilidad     : " + habitacion.sumarUtilidad);
-    	console.log("nombre: " + habitacion.nombre);
-    	console.log"Detalle: " + habitacion.detalle);
-    	console.log("Cantidad: " + habitacion.cantidad);
-    	console.log("importe con utilidad     : " + habitacion.sumarUtilidad());
+    document.write("importe: " + habitacion.importe);
+    document.write("importe con utilidad     : " + habitacion.sumarUtilidad);
+    console.log("nombre: " + habitacion.nombre);
+    console.log"Detalle: " + habitacion.detalle);
+    console.log("Cantidad: " + habitacion.cantidad);
+    console.log("importe con utilidad     : " + habitacion.sumarUtilidad());
 }
 
 var pocodisponibilidad = arrayhabitacion.filter(habitacion => habitacion.cantidad <= 2);
@@ -60,7 +50,6 @@ for (var habitacion of pocoDisponibilidad) {
     document.write("Detalle: " + habitacion.detalle);
     document.write("Cantidad: " + habitacion.cantidad);
 }
-
 
 var sinDisponibilidad = arrayhabitacion.filter(habitacion => habitacion.cantidad == 0 );
 	console.log(sinDisponibilidad);
@@ -82,6 +71,7 @@ for (var habitacion of sinDisponibilidad) {
     document.write("Detalle: " + habitacion.detalle);
     document.write("Cantidad: " + habitacion.cantidad);
 }     
+
 
 var ordenadosCant = [];
 ordenadosCant = arrayhabitacion.map(elemento => elemento);
